@@ -1,0 +1,128 @@
+students =[]
+while True:
+
+    print("\n===== Student Management System =====")
+    print("1. Add Student")
+    print("2. View Students")
+    print("3. Search Student")
+    print("4. Update Student")
+    print("5. Delete Student")
+    print("6. Total Students")
+    print("7. Exit")
+
+    choice = input("Enter your choice: ")
+    if choice == "1":
+
+        name = input("Enter Student Name: ")
+        roll = input("Enter Roll Number: ")
+        department = input("Enter Department: ")
+        cgpa = input("Enter CGPA: ")
+
+        student = {
+            "name": name,
+            "roll": roll,
+            "department": department,
+            "cgpa": cgpa
+        }
+
+        students.append(student)
+
+        print("Student added successfully!")
+
+    elif choice == "2":
+
+        if len(students) == 0:
+            print("No students found.")
+
+        else:
+
+            print("\n===== Student List =====")
+
+            for student in students:
+
+                print("-------------------------")
+                print("Name       :", student["name"])
+                print("Roll No    :", student["roll"])
+                print("Department :", student["department"])
+                print("CGPA       :", student["cgpa"])
+
+    elif choice == "3":
+
+        search_roll = input("Enter Roll Number: ")
+
+        found = False
+
+        for student in students:
+
+            if student["roll"] == search_roll:
+
+                print("\nStudent Found")
+                print("Name       :", student["name"])
+                print("Roll No    :", student["roll"])
+                print("Department :", student["department"])
+                print("CGPA       :", student["cgpa"])
+
+                found = True
+                break
+
+        if not found:
+            print("Student not found.")
+    
+
+    elif choice == "4":
+
+        search_roll = input("Enter Roll Number to Update: ")
+
+        found = False
+
+        for student in students:
+
+            if student["roll"] == search_roll:
+
+                student["name"] = input("Enter New Name: ")
+                student["roll"] = input("Enter New Roll Number: ")
+                student["department"] = input("Enter New Department: ")
+                student["cgpa"] = input("Enter New CGPA: ")
+
+                print("Student updated successfully!")
+
+                found = True
+                break
+
+        if not found:
+            print("Student not found.")
+
+
+    elif choice == "5":
+
+        search_roll = input("Enter Roll Number to Delete: ")
+
+        found = False
+
+        for student in students:
+
+            if student["roll"] == search_roll:
+
+                students.remove(student)
+
+                print("Student deleted successfully!")
+
+                found = True
+                break
+
+        if not found:
+            print("Student not found.")
+
+    elif choice == "6":
+
+        print("Total Students:", len(students))
+
+    elif choice == "7":
+
+        print("Thank You!")
+
+        break
+
+    else:
+
+        print("Invalid Choice")
