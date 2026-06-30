@@ -91,8 +91,7 @@ while True:
 
         if not found:
             print("Student not found.")
-
-
+    
     elif choice == "5":
 
         search_roll = input("Enter Roll Number to Delete: ")
@@ -115,9 +114,26 @@ while True:
 
     elif choice == "6":
 
-        print("Total Students:", len(students))
+        file = open("students.txt", "w")
+
+        for student in students:
+
+            file.write("Name: " + student["name"] + "\n")
+            file.write("Roll Number: " + student["roll"] + "\n")
+            file.write("Department: " + student["department"] + "\n")
+            file.write("CGPA: " + student["cgpa"] + "\n")
+            file.write("--------------------------\n")
+
+        file.close()
+ 
+        print("Student data saved successfully!")
+
 
     elif choice == "7":
+
+        print("Total Students:", len(students))
+
+    elif choice == "8":
 
         print("Thank You!")
 

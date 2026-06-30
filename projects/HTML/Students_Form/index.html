@@ -7,21 +7,23 @@
 
 <body>
 
+<div class="container">
+
 <h1>Student Registration Form</h1>
 
 <form>
 
-<label>Student Name</label><br>
-<input type="text" placeholder="Enter your name" required><br><br>
+<label>Student Name</label>
+<input type="text" placeholder="Enter your name" required>
 
-<label>Email</label><br>
-<input type="email" placeholder="Enter your email" required><br><br>
+<label>Email</label>
+<input type="email" placeholder="Enter your email" required>
 
-<label>Phone Number</label><br>
-<input type="tel" placeholder="Enter phone number"><br><br>
+<label>Phone Number</label>
+<input type="tel" placeholder="Enter phone number" required>
 
-<label>Date of Birth</label><br>
-<input type="date"><br><br>
+<label>Date of Birth</label>
+<input type="date" required>
 
 <label>Gender</label><br>
 
@@ -31,44 +33,77 @@
 
 <br><br>
 
-<label>Department</label><br>
+<label>Department</label>
 
-<select>
-    <option>AI & DS</option>
-    <option>CSE</option>
-    <option>IT</option>
-    <option>ECE</option>
-    <option>EEE</option>
+<select required>
+    <option>Select Department</option>
+    <option>Computer Science</option>
+    <option>Information Technology</option>
+    <option>Electronics</option>
+    <option>Electrical</option>
+    <option>Mechanical</option>
+    <option>Civil</option>
 </select>
 
-<br><br>
+<label>Course</label>
+
+<select required>
+    <option>Select Course</option>
+    <option>B.Tech</option>
+    <option>BCA</option>
+    <option>BSc</option>
+    <option>B.Com</option>
+    <option>MCA</option>
+</select>
+
+<label>Blood Group</label>
+
+<select>
+    <option>Select Blood Group</option>
+    <option>A+</option>
+    <option>A-</option>
+    <option>B+</option>
+    <option>B-</option>
+    <option>AB+</option>
+    <option>AB-</option>
+    <option>O+</option>
+    <option>O-</option>
+</select>
 
 <label>Hobbies</label><br>
 
 <input type="checkbox"> Reading
 <input type="checkbox"> Coding
-<input type="checkbox"> Sports
 <input type="checkbox"> Music
+<input type="checkbox"> Sports
 
 <br><br>
 
-<label>Address</label><br>
+<label>Address</label>
 
-<textarea rows="4" cols="40" placeholder="Enter your address"></textarea>
-<label>Upload Profile Photo</label><br>
-<input type="file"><br><br>
+<textarea rows="4" placeholder="Enter your address"></textarea>
+
+<label>Profile Photo</label>
+
+<input type="file">
+
+<label>Password</label>
+
+<input type="password" placeholder="Enter Password">
+
+<br>
+
+<input type="checkbox"> I agree to the Terms and Conditions
+
 <br><br>
 
-<label>Password</label><br>
-<input type="password" placeholder="Enter password">
+<input type="submit" value="Register">
 
-<br><br>
-
-<button type="submit">Register</button>
-
-<button type="reset">Reset</button>
+<input type="reset" value="Clear">
 
 </form>
+
+</div>
 
 </body>
 </html>
