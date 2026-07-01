@@ -1,4 +1,33 @@
 students =[]
+
+try:
+    file = open("students.txt", "r")
+
+    while True:
+        name = file.readline().strip()
+
+        if not name:
+            break
+
+        roll = file.readline().strip()
+        department = file.readline().strip()
+        cgpa = file.readline().strip()
+
+        file.readline()   # Skip separator line
+
+        student = {
+            "name": name.replace("Name: ", ""),
+            "roll": roll.replace("Roll Number: ", ""),
+            "department": department.replace("Department: ", ""),
+            "cgpa": cgpa.replace("CGPA: ", "")
+        }
+
+        students.append(student)
+
+    file.close()
+
+except FileNotFoundError:
+    pass
 while True:
 
     print("\n===== Student Management System =====")

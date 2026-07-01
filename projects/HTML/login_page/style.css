@@ -58,3 +58,27 @@ p{
     margin-top:20px;
     text-align:center;
 }
+.input-box{
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.input-box input{
+    width: 100%;
+    padding: 10px 40px;
+}
+
+.input-box i:first-child{
+    position: absolute;
+    left: 12px;
+    top: 13px;
+    color: gray;
+}
+
+.eye{
+    position: absolute;
+    right: 12px;
+    top: 13px;
+    color: gray;
+    cursor: pointer;
+}
