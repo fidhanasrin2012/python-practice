@@ -13,13 +13,13 @@
 
 <h2>Login</h2>
 
-<form>
+<form onsubmit="return validateLogin()">
 
 <label>Username</label>
 
 <div class="input-box">
     <i class="fa-solid fa-user"></i>
-    <input type="text" placeholder="Enter Username" required>
+    <input type="text" id="username" placeholder="Enter Username" required>
 </div>
 <label>Password</label>
 
@@ -51,17 +51,7 @@ Don't have an account?
 
 </div>
 
-<script>
-function showPassword() {
-    var x = document.getElementById("password");
-
-    if (x.type === "password") {
-        x.type = "text";
-    } else {
-        x.type = "password";
-    }
-}
-</script>
+<script src="script.js"></script>
 
 </body>
 </html>

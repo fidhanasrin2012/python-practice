@@ -77,25 +77,29 @@ while True:
 
     elif choice == "3":
 
-        search_roll = input("Enter Roll Number: ")
+        if len(students) == 0:
+            print("No students found.")
 
-        found = False
+        else:
+            search_name = input("Enter Student Name: ").lower()
 
-        for student in students:
+            found = False
 
-            if student["roll"] == search_roll:
+            for student in students:
 
-                print("\nStudent Found")
-                print("Name       :", student["name"])
-                print("Roll No    :", student["roll"])
-                print("Department :", student["department"])
-                print("CGPA       :", student["cgpa"])
+                if student["name"].lower() == search_name:
 
-                found = True
-                break
+                    print("\n===== Student Found =====")
+                    print("Name       :", student["name"])
+                    print("Roll No    :", student["roll"])
+                    print("Department :", student["department"])
+                    print("CGPA       :", student["cgpa"])
 
-        if not found:
-            print("Student not found.")
+                    found = True
+                    break
+
+            if not found:
+                print("Student not found.")
     
 
     elif choice == "4":

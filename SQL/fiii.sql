@@ -27,3 +27,20 @@ SELECT * FROM students;
 -- WHERE
 SELECT * FROM students
 WHERE age = 21;
+
+INSERT INTO students VALUES
+(4,'Anu',19)
+(5,'Arun',22)
+
+SELECT * FROM students
+ORDER BY age;
+
+SELECT * FROM students
+ORDER BY age DESC;
+
+SELECT * FROM students
+LIMIT 3;
+
+SELECT * FROM students
+ORDER BY age
+LIMIT 2;
