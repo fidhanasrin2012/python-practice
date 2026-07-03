@@ -37,7 +37,8 @@ while True:
     print("4. Update Student")
     print("5. Delete Student")
     print("6. Total Students")
-    print("7. Exit")
+    print("7. Total Number of Students")
+    print("8. Exit")
 
     choice = input("Enter your choice: ")
     if choice == "1":
@@ -161,12 +162,19 @@ while True:
  
         print("Student data saved successfully!")
 
-
     elif choice == "7":
+
+        total = len(students)
+
+        print("\n===== Student Report =====")
+        print("Total Number of Students :", total)
+
+
+    elif choice == "8":
 
         print("Total Students:", len(students))
 
-    elif choice == "8":
+    elif choice == "9":
 
         print("Thank You!")
 
