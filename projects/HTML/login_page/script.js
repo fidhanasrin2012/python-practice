@@ -13,18 +13,20 @@ function showPassword() {
 
 function validateLogin() {
 
-    let username = document.getElementById("username").value.trim();
+    let email = document.getElementById("email").value.trim();
     let password = document.getElementById("password").value.trim();
 
-    if (username === "" || password === "") {
-
+    if (email === "" || password === "") {
         alert("Please fill all fields.");
         return false;
-
     }
 
-    alert("Login Successful!");
+    if (!email.includes("@") || !email.includes(".")) {
+        alert("Please enter a valid email address.");
+        return false;
+    }
+
+    alert("Welcome! Login Successful.");
 
     return true;
-
 }

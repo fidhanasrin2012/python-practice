@@ -68,3 +68,11 @@ SELECT * FROM students;
 -- Count total students
 SELECT COUNT(*) AS Total_Students
 FROM students;
+
+
+-- DISTINCT
+SELECT DISTINCT age
+FROM students;
+
+-- DROP TABLE (Run this only after practicing everything)
+DROP TABLE students;
