@@ -19,16 +19,48 @@ to the organization's success.
 Projects:
 
 • Student Management System
-  - Python, File Handling, CRUD Operations
+  - Python
+  - File Handling
+  - CRUD Operations
+  - Search, Update & Delete Student Records
 
 • Library Management System
-  - Python, File Handling, CRUD Operations
+  - Python
+  - File Handling
+  - CRUD Operations
+  - Search, Update & Delete Book Records
 
 • Employee Management System
-  - Python, Add/View/Search Employee
+  - Python
+  - File Handling
+  - CRUD Operations
+  - Search, Update & Delete Employee Records
 
 • Login Page
-  - HTML, CSS, JavaScript
+  - HTML
+  - CSS
+  - JavaScript
+  - Show/Hide Password
+  - Login Validation
 
 • Student Registration Form
-  - HTML, CSS, JavaScript
+  - HTML
+  - CSS
+  - JavaScript
+  - Form Validation
+  - Password Confirmation
+
+• Personal Portfolio Website
+  - HTML
+  - CSS
+  - Responsive Layout (Basic)
+  - Showcases Skills, Projects and Contact Details
+
+Technical Skills:
+
+• Python
+• SQL
+• HTML
+• CSS
+• JavaScript (Basics)
+• Git & GitHub

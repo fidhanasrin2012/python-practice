@@ -76,3 +76,28 @@ FROM students;
 
 -- DROP TABLE (Run this only after practicing everything)
 DROP TABLE students;
+
+-- Update a student's name
+UPDATE students
+SET name = 'Fidha Nasrin'
+WHERE id = 1;
+
+-- Update a student's age
+UPDATE students
+SET age = 21
+WHERE id = 2;
+
+-- Display all students
+SELECT * FROM students;
+
+-- Search students whose name starts with 'F'
+SELECT * FROM students
+WHERE name LIKE 'F%';
+
+-- Search students whose name ends with 'a'
+SELECT * FROM students
+WHERE name LIKE '%a';
+
+-- Search students whose name contains 'id'
+SELECT * FROM students
+WHERE name LIKE '%id%';
