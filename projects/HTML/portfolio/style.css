@@ -53,14 +53,31 @@ footer{
     margin-top:30px;
 }
 button{
-    background:#1f4e79;
+    background:darkblue;
     color:white;
-    padding:10px 20px;
+    padding:12px 20px;
     border:none;
     border-radius:5px;
     cursor:pointer;
+    font-size:16px;
 }
 
 button:hover{
-    background:#0f3057;
+    background:#2563eb;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+.profile-pic{
+    width:220px;
+    height:220px;
+    border-radius:50%;
+    display:block;
+    margin:20px auto;
+    border:4px solid darkblue;
+
+    object-fit:cover;
+    object-position:center;
 }

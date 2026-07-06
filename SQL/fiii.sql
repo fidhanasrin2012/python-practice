@@ -29,9 +29,8 @@ SELECT * FROM students
 WHERE age = 21;
 
 INSERT INTO students VALUES
-(4,'Anu',19)
-(5,'Arun',22)
-
+(4,'Anu',19),
+(5,'Arun',22);
 SELECT * FROM students
 ORDER BY age;
 
@@ -74,8 +73,6 @@ FROM students;
 SELECT DISTINCT age
 FROM students;
 
--- DROP TABLE (Run this only after practicing everything)
-DROP TABLE students;
 
 -- Update a student's name
 UPDATE students
@@ -101,3 +98,16 @@ WHERE name LIKE '%a';
 -- Search students whose name contains 'id'
 SELECT * FROM students
 WHERE name LIKE '%id%';
+
+SELECT * FROM students
+WHERE id IN (1,2);
+
+SELECT * FROM students
+WHERE age BETWEEN 20 AND 22;
+
+SELECT * FROM students
+WHERE department IS NULL;
+
+
+-- DROP TABLE (Run this only after practicing everything)
+DROP TABLE students;
