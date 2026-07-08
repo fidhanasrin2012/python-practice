@@ -1,41 +1,76 @@
+-- ===========================
+-- CREATE TABLE
+-- ===========================
+
 CREATE TABLE students (
     id INT,
     name VARCHAR(50),
     age INT
 );
 
+-- ===========================
+-- INSERT DATA
+-- ===========================
+
 INSERT INTO students VALUES
 (1,'Asha',20),
 (2,'Rahul',21),
-(3,'Fidha',20);
+(3,'Fidha',20),
+(4,'Anu',19),
+(5,'Arun',22);
+
+-- ===========================
+-- DISPLAY ALL STUDENTS
+-- ===========================
 
 SELECT * FROM students;
 
+-- ===========================
 -- UPDATE
+-- ===========================
+
 UPDATE students
 SET age = 22
 WHERE id = 1;
 
-SELECT * FROM students;
-
--- DELETE
-DELETE FROM students
+UPDATE students
+SET name = 'Fidha Nasrin'
 WHERE id = 3;
 
 SELECT * FROM students;
 
+-- ===========================
+-- DELETE
+-- ===========================
+
+DELETE FROM students
+WHERE id = 5;
+
+SELECT * FROM students;
+
+-- ===========================
 -- WHERE
+-- ===========================
+
 SELECT * FROM students
 WHERE age = 21;
 
-INSERT INTO students VALUES
-(4,'Anu',19),
-(5,'Arun',22);
+-- ===========================
+-- ORDER BY
+-- ===========================
+
 SELECT * FROM students
 ORDER BY age;
 
 SELECT * FROM students
 ORDER BY age DESC;
+
+SELECT * FROM students
+ORDER BY name;
+
+-- ===========================
+-- LIMIT
+-- ===========================
 
 SELECT * FROM students
 LIMIT 3;
@@ -44,11 +79,27 @@ SELECT * FROM students
 ORDER BY age
 LIMIT 2;
 
--- Add a new column
+-- ===========================
+-- IN
+-- ===========================
+
+SELECT * FROM students
+WHERE id IN (1,3);
+
+-- ===========================
+-- BETWEEN
+-- ===========================
+
+SELECT * FROM students
+WHERE age BETWEEN 20 AND 22;
+
+-- ===========================
+-- ALTER TABLE
+-- ===========================
+
 ALTER TABLE students
 ADD COLUMN department VARCHAR(50);
 
--- Update department values
 UPDATE students
 SET department = 'AI & DS'
 WHERE id = 1;
@@ -58,56 +109,98 @@ SET department = 'CSE'
 WHERE id = 2;
 
 UPDATE students
-SET department = 'ECE'
+SET department = 'AI & DS'
 WHERE id = 3;
 
--- Display all students
+UPDATE students
+SET department = 'ECE'
+WHERE id = 4;
+
 SELECT * FROM students;
 
--- Count total students
+-- ===========================
+-- COUNT
+-- ===========================
+
 SELECT COUNT(*) AS Total_Students
 FROM students;
 
-
+-- ===========================
 -- DISTINCT
-SELECT DISTINCT age
+-- ===========================
+
+SELECT DISTINCT department
 FROM students;
 
+-- ===========================
+-- LIKE
+-- ===========================
 
--- Update a student's name
-UPDATE students
-SET name = 'Fidha Nasrin'
-WHERE id = 1;
-
--- Update a student's age
-UPDATE students
-SET age = 21
-WHERE id = 2;
-
--- Display all students
-SELECT * FROM students;
-
--- Search students whose name starts with 'F'
 SELECT * FROM students
 WHERE name LIKE 'F%';
 
--- Search students whose name ends with 'a'
 SELECT * FROM students
 WHERE name LIKE '%a';
 
--- Search students whose name contains 'id'
 SELECT * FROM students
 WHERE name LIKE '%id%';
 
-SELECT * FROM students
-WHERE id IN (1,2);
+-- ===========================
+-- CREATE COURSES TABLE
+-- ===========================
 
-SELECT * FROM students
-WHERE age BETWEEN 20 AND 22;
+CREATE TABLE courses (
+    course_id INT,
+    course_name VARCHAR(50),
+    student_id INT
+);
 
-SELECT * FROM students
-WHERE department IS NULL;
+-- ===========================
+-- INSERT COURSES
+-- ===========================
 
+INSERT INTO courses VALUES
+(101,'Python',1),
+(102,'SQL',2),
+(103,'Power BI',1),
+(104,'Web Development',4);
 
--- DROP TABLE (Run this only after practicing everything)
-DROP TABLE students;
+-- ===========================
+-- DISPLAY COURSES
+-- ===========================
+
+SELECT * FROM courses;
+
+-- ===========================
+-- INNER JOIN
+-- ===========================
+
+SELECT students.id,
+students.name,
+courses.course_name
+FROM students
+INNER JOIN courses
+ON students.id = courses.student_id;
+
+-- ===========================
+-- LEFT JOIN
+-- ===========================
+
+SELECT students.id,
+students.name,
+courses.course_name
+FROM students
+LEFT JOIN courses
+ON students.id = courses.student_id;
+
+-- ===========================
+-- RIGHT JOIN
+-- (Works only in databases that support RIGHT JOIN)
+-- ===========================
+
+SELECT students.id,
+students.name,
+courses.course_name
+FROM students
+RIGHT JOIN courses
+ON students.id = courses.student_id;

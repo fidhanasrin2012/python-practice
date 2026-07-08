@@ -16,46 +16,35 @@ Python, SQL, Web Development, and continuously learn new technologies while cont
 to the organization's success.
 
 
-Projects:
+Projects
 
 • Student Management System
-  - Python
-  - File Handling
-  - CRUD Operations
-  - Search, Update & Delete Student Records
+  - Python, File Handling, CRUD Operations
 
 • Library Management System
-  - Python
-  - File Handling
-  - CRUD Operations
-  - Search, Update & Delete Book Records
+  - Python, File Handling, CRUD Operations
 
 • Employee Management System
-  - Python
-  - File Handling
-  - CRUD Operations
-  - Search, Update & Delete Employee Records
+  - Python, Add/View/Search Employee
+
+• Hospital Management System
+  - Python, File Handling, CRUD Operations
+  - Add, View, Search, Update and Delete Patient Records
+  - Automatic Data Storage using patients.txt
 
 • Login Page
-  - HTML
-  - CSS
-  - JavaScript
-  - Show/Hide Password
-  - Login Validation
+  - HTML, CSS, JavaScript
 
 • Student Registration Form
-  - HTML
-  - CSS
-  - JavaScript
-  - Form Validation
-  - Password Confirmation
+  - HTML, CSS, JavaScript
 
 • Personal Portfolio Website
-  - HTML
-  - CSS
-  - Responsive Layout (Basic)
-  - Showcases Skills, Projects and Contact Details
+  - HTML, CSS, JavaScript
+  - Responsive Design
+  - Profile Photo
+  - Resume Download
 
+  
 Technical Skills:
 
 • Python
